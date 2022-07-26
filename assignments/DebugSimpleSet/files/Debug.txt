@@ -1,0 +1,12 @@
+Debugging ArraySet.java
+Name:
+Section:
+
+Bug #1:
+    -What's the name of failed test?
+    -Where (line number) did you place breakpoint(s)? 
+    -Where (line number) was the bug was found?
+    -What did you do to fix it?
+
+Answer same questions for any other bugs found. 
+

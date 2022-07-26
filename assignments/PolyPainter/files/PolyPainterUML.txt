@@ -1,0 +1,32 @@
+@startuml
+class PolyPainter {
+	{static} main(String[] args)
+}
+abstract class PaintableThing {
+	{abstract} draw(Graphics g)
+	{abstract} toString()
+}
+class PolyPainterDrawPanel {
+	paintThings(PaintableThing[] things)
+	paintComponent(Graphics g)
+	clear()
+}
+class RoundThing {
+	draw(Graphics g)
+	toString()
+}
+class RoundFilledThing {
+	draw(Graphics g)
+	toString()
+}
+class RectangleThing {
+	draw(Graphics g)
+	toString()
+}
+RoundThing --|> PaintableThing
+RoundFilledThing --|> RoundThing
+RectangleThing --|> PaintableThing
+PolyPainter --> PolyPainterDrawPanel
+PolyPainter o-- PaintableThing
+PolyPainterDrawPanel ..> PaintableThing
+@enduml

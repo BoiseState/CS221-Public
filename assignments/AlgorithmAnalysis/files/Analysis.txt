@@ -1,0 +1,133 @@
+Analysis of Algorithms
+[your name]
+CS 221
+
+Defend all answers based on specific references to the code.
+Do not count initialization of method arguments.
+You are strongly encouraged to walk through algorithms in the debugger
+and to add statement-counting code to given methods to test and refine your analysis.
+
+**************************************************************************************
+1. Algorithm: find()
+
+A. Minimum Statements.
+
+   - How many statements would be executed in a call to find()
+   when the array size is zero (n == 0)?
+
+---------------------
+B. Best Case Scenario.
+
+   - Under what conditions would the minimum number of statements be executed for
+   an array where n is large?
+
+  - How many statements would be executed?
+  
+  - What is the time efficiency of the method using Big-O notation under these conditions?
+
+---------------------
+C. Worst Case Scenario.
+   - Under what conditions would the maximum number of statements be executed for
+   an array where n is large?
+
+
+  - How many statements would be executed?
+
+
+  - What is the time efficiency of the method using Big-O notation under these conditions?
+
+---------------------
+D. Expected Average Case Scenario.
+   - Assuming a random array of unique elements and the target element is in the array,
+   where would a target element be located on average?
+
+  - How many statements would be executed?
+
+  - What is the time efficiency of the method using Big-O notation under these conditions?
+
+
+**************************************************************************************
+2. Algorithm: replaceAll()
+
+A. Minimum Statements.
+
+   - How many statements would be executed in a call to replaceAll()
+   when the array size is zero (n == 0)?
+
+---------------------
+B. Best Case Scenario.
+
+   - Under what conditions would the minimum number of statements be executed for
+   an array where n is large?
+
+
+   - How many statements will be executed?
+
+
+   - What is the time efficiency of the method using Big-O notation under these conditions?
+
+---------------------
+C. Worst Case Scenario.
+
+   - Under what conditions would the maximum number of statements be executed for
+   an array where n is large?
+
+
+   - How many statements will be executed?
+
+   
+   - What is the time efficiency of the method using Big-O notation under these conditions?
+
+---------------------
+D. Expected Average Case Scenario.
+
+   - Assuming a random array of unique elements and the oldValue element is in the array,
+   what is the average number of statements executed?
+
+
+   - What is the time efficiency of the method using Big-O notation under these conditions?
+
+
+**************************************************************************************
+3. Algorithm: sortIt()
+
+A. Minimum Statements.
+
+   - How many statements would be executed in a call to replaceAll()
+   when the array size is zero (n == 0) and (n==1)?
+
+---------------------
+B. Best Case Scenario.
+
+   - Under what conditions would the minimum number of statements be executed for
+   an array where n is large?
+
+
+   - How many statements will be executed?
+
+
+   - What is the time efficiency of the method using Big-O notation under these conditions?
+
+---------------------
+C. Worst Case Scenario.
+
+   - Under what conditions would the maximum number of statements be executed for
+   an array where n is large?
+
+
+   - How many statements will be executed?
+
+
+   - What is the time efficiency of the method using Big-O notation under these conditions?
+
+---------------------
+D. Expected Average Case Scenario.
+
+   - Assuming a random array of unique elements,
+   what is the average number of statements executed?
+
+
+   - What is the time efficiency of the method using Big-O notation under these conditions?
+
+
+**************************************************************************************

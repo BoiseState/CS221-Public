@@ -1,0 +1,35 @@
+Some of the Graphics methods introduced in CS 121:
+
+draw3DRect(int x, int y, int width, int height, boolean raised)
+Draws a 3D highlighted outline of the defined rectangle in the current graphics color.
+
+drawArc(int x, int y, int width, int height, int startAngle, int arcAngle)
+Draws the outline of a circular or elliptical arc within the defined bounding rectangle in the current graphics color.
+
+drawLine(int x1, int y1, int x2, int y2)
+Draws a line using the current color between points (x1, y1) and (x2, y2).
+
+drawOval(int x, int y, int width, int height)
+Draws the outline of an oval within the defined bounding rectangle in the current graphics color.
+
+drawRect(int x, int y, int width, int height)
+Draws the outline of the defined rectangle in the current graphics color.
+
+drawRoundRect(int x, int y, int width, int height, int arcWidth, int arcHeight)
+Draws an outlined round-cornered rectangle in the current graphics color.
+
+fill3DRect(int x, int y, int width, int height, boolean raised)
+Fills a 3D highlighted rectangle with the current graphics color.
+
+fillArc(int x, int y, int width, int height, int startAngle, int arcAngle)
+Fills a circular or elliptical arc within the defined bounding rectangle in the current graphics color.
+
+fillOval(int x, int y, int width, int height)
+Fills an oval within the defined bounding rectangle with the current graphics color.
+
+fillRect(int x, int y, int width, int height)
+Fills the defined rectangle with the current graphics color.
+
+fillRoundRect(int x, int y, int width, int height, int arcWidth, int arcHeight)
+Fills the defined round-cornered rectangle with the current graphics color.
+
