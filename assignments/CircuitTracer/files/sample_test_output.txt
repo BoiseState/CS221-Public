@@ -1,0 +1,544 @@
+*******************************
+CircuitBoard Constructor Tests
+*******************************
+
+Testing CircuitBoard("noSuchFile")
+Expecting FileNotFoundException.
+java.io.FileNotFoundException: noSuchFile (The system cannot find the file specified)
+CircuitBoard("noSuchFile")                    	   PASS
+
+Testing CircuitBoard("valid1.dat")
+CircuitBoard contents match expected values.
+CircuitBoard("valid1.dat")                    	   PASS
+
+Testing CircuitBoard("valid2.dat")
+CircuitBoard contents match expected values.
+CircuitBoard("valid2.dat")                    	   PASS
+
+Testing CircuitBoard("valid3.dat")
+CircuitBoard contents match expected values.
+CircuitBoard("valid3.dat")                    	   PASS
+
+Testing CircuitBoard("valid4.dat")
+CircuitBoard contents match expected values.
+CircuitBoard("valid4.dat")                    	   PASS
+
+Testing CircuitBoard("valid5.dat")
+CircuitBoard contents match expected values.
+CircuitBoard("valid5.dat")                    	   PASS
+
+Testing CircuitBoard("valid6.dat")
+CircuitBoard contents match expected values.
+CircuitBoard("valid6.dat")                    	   PASS
+
+Testing CircuitBoard("valid7.dat")
+CircuitBoard contents match expected values.
+CircuitBoard("valid7.dat")                    	   PASS
+
+Testing CircuitBoard("valid8.dat")
+CircuitBoard contents match expected values.
+CircuitBoard("valid8.dat")                    	   PASS
+
+Testing CircuitBoard("valid9.dat")
+CircuitBoard contents match expected values.
+CircuitBoard("valid9.dat")                    	   PASS
+
+Testing CircuitBoard("valid10.dat")
+CircuitBoard contents match expected values.
+CircuitBoard("valid10.dat")                   	   PASS
+
+Testing CircuitBoard("invalid1.dat")
+Expecting InvalidFileFormatException.
+InvalidFileFormatException: multiple starting points
+CircuitBoard("invalid1.dat")                  	   PASS
+
+Testing CircuitBoard("invalid2.dat")
+Expecting InvalidFileFormatException.
+InvalidFileFormatException: multiple ending points
+CircuitBoard("invalid2.dat")                  	   PASS
+
+Testing CircuitBoard("invalid3.dat")
+Expecting InvalidFileFormatException.
+InvalidFileFormatException: missing start or end point
+CircuitBoard("invalid3.dat")                  	   PASS
+
+Testing CircuitBoard("invalid4.dat")
+Expecting InvalidFileFormatException.
+InvalidFileFormatException: missing start or end point
+CircuitBoard("invalid4.dat")                  	   PASS
+
+Testing CircuitBoard("invalid5.dat")
+Expecting InvalidFileFormatException.
+InvalidFileFormatException: invalid character 'N'
+CircuitBoard("invalid5.dat")                  	   PASS
+
+Testing CircuitBoard("invalid6.dat")
+Expecting InvalidFileFormatException.
+InvalidFileFormatException: row contains extra values
+CircuitBoard("invalid6.dat")                  	   PASS
+
+Testing CircuitBoard("invalid7.dat")
+Expecting InvalidFileFormatException.
+InvalidFileFormatException: missing values in a row
+CircuitBoard("invalid7.dat")                  	   PASS
+
+Testing CircuitBoard("invalid8.dat")
+Expecting InvalidFileFormatException.
+InvalidFileFormatException: missing values in a row
+CircuitBoard("invalid8.dat")                  	   PASS
+
+Testing CircuitBoard("invalid9.dat")
+Expecting InvalidFileFormatException.
+InvalidFileFormatException: first line does not contain valid row and column values
+CircuitBoard("invalid9.dat")                  	   PASS
+
+Testing CircuitBoard("invalid10.dat")
+Expecting InvalidFileFormatException.
+InvalidFileFormatException: extra rows
+CircuitBoard("invalid10.dat")                 	   PASS
+
+Testing CircuitBoard("invalid11.dat")
+Expecting InvalidFileFormatException.
+InvalidFileFormatException: missing values in a row
+CircuitBoard("invalid11.dat")                 	   PASS
+
+Testing CircuitBoard("invalid12.dat")
+Expecting InvalidFileFormatException.
+InvalidFileFormatException: first line does not contain valid row and column values
+CircuitBoard("invalid12.dat")                 	   PASS
+
+************************************
+CircuitTracer Valid Input File Tests
+************************************
+
+Testing java CircuitTracer -s -c valid1.dat
+Output matches expected content and format.
+java CircuitTracer -s -c valid1.dat           	   PASS
+
+Testing java CircuitTracer -q -c valid1.dat
+Output matches expected content and format.
+java CircuitTracer -q -c valid1.dat           	   PASS
+
+Testing java CircuitTracer -s -c valid2.dat
+Output matches expected content and format.
+java CircuitTracer -s -c valid2.dat           	   PASS
+
+Testing java CircuitTracer -q -c valid2.dat
+Output matches expected content and format.
+java CircuitTracer -q -c valid2.dat           	   PASS
+
+Testing java CircuitTracer -s -c valid3.dat
+Output matches expected content and format.
+java CircuitTracer -s -c valid3.dat           	   PASS
+
+Testing java CircuitTracer -q -c valid3.dat
+Output matches expected content and format.
+java CircuitTracer -q -c valid3.dat           	   PASS
+
+Testing java CircuitTracer -s -c valid4.dat
+Output matches expected content and format.
+java CircuitTracer -s -c valid4.dat           	   PASS
+
+Testing java CircuitTracer -q -c valid4.dat
+Output matches expected content and format.
+java CircuitTracer -q -c valid4.dat           	   PASS
+
+Testing java CircuitTracer -s -c valid5.dat
+Output matches expected content and format.
+java CircuitTracer -s -c valid5.dat           	   PASS
+
+Testing java CircuitTracer -q -c valid5.dat
+Output matches expected content and format.
+java CircuitTracer -q -c valid5.dat           	   PASS
+
+Testing java CircuitTracer -s -c valid6.dat
+Output matches expected content and format.
+java CircuitTracer -s -c valid6.dat           	   PASS
+
+Testing java CircuitTracer -q -c valid6.dat
+Output matches expected content and format.
+java CircuitTracer -q -c valid6.dat           	   PASS
+
+Testing java CircuitTracer -s -c valid7.dat
+Output matches expected content and format.
+java CircuitTracer -s -c valid7.dat           	   PASS
+
+Testing java CircuitTracer -q -c valid7.dat
+Output matches expected content and format.
+java CircuitTracer -q -c valid7.dat           	   PASS
+
+Testing java CircuitTracer -s -c valid8.dat
+Output matches expected content and format.
+java CircuitTracer -s -c valid8.dat           	   PASS
+
+Testing java CircuitTracer -q -c valid8.dat
+Output matches expected content and format.
+java CircuitTracer -q -c valid8.dat           	   PASS
+
+Testing java CircuitTracer -s -c valid9.dat
+Output matches expected content and format.
+java CircuitTracer -s -c valid9.dat           	   PASS
+
+Testing java CircuitTracer -q -c valid9.dat
+Output matches expected content and format.
+java CircuitTracer -q -c valid9.dat           	   PASS
+
+Testing java CircuitTracer -s -c valid10.dat
+Output matches expected content and format.
+java CircuitTracer -s -c valid10.dat          	   PASS
+
+Testing java CircuitTracer -q -c valid10.dat
+Output matches expected content and format.
+java CircuitTracer -q -c valid10.dat          	   PASS
+
+**************************************
+CircuitTracer Invalid Input File Tests
+**************************************
+
+Testing java CircuitTracer -s -c invalid1.dat
+Expecting a report on problem with invalid1.dat and clean program exit.
+***begin output***
+Unable to load input file: invalid1.dat
+InvalidFileFormatException: multiple starting points
+***end output***
+java CircuitTracer -s -c invalid1.dat         	   PASS
+
+Testing java CircuitTracer -q -c invalid1.dat
+Expecting a report on problem with invalid1.dat and clean program exit.
+***begin output***
+Unable to load input file: invalid1.dat
+InvalidFileFormatException: multiple starting points
+***end output***
+java CircuitTracer -q -c invalid1.dat         	   PASS
+
+Testing java CircuitTracer -s -c invalid2.dat
+Expecting a report on problem with invalid2.dat and clean program exit.
+***begin output***
+Unable to load input file: invalid2.dat
+InvalidFileFormatException: multiple ending points
+***end output***
+java CircuitTracer -s -c invalid2.dat         	   PASS
+
+Testing java CircuitTracer -q -c invalid2.dat
+Expecting a report on problem with invalid2.dat and clean program exit.
+***begin output***
+Unable to load input file: invalid2.dat
+InvalidFileFormatException: multiple ending points
+***end output***
+java CircuitTracer -q -c invalid2.dat         	   PASS
+
+Testing java CircuitTracer -s -c invalid3.dat
+Expecting a report on problem with invalid3.dat and clean program exit.
+***begin output***
+Unable to load input file: invalid3.dat
+InvalidFileFormatException: missing start or end point
+***end output***
+java CircuitTracer -s -c invalid3.dat         	   PASS
+
+Testing java CircuitTracer -q -c invalid3.dat
+Expecting a report on problem with invalid3.dat and clean program exit.
+***begin output***
+Unable to load input file: invalid3.dat
+InvalidFileFormatException: missing start or end point
+***end output***
+java CircuitTracer -q -c invalid3.dat         	   PASS
+
+Testing java CircuitTracer -s -c invalid4.dat
+Expecting a report on problem with invalid4.dat and clean program exit.
+***begin output***
+Unable to load input file: invalid4.dat
+InvalidFileFormatException: missing start or end point
+***end output***
+java CircuitTracer -s -c invalid4.dat         	   PASS
+
+Testing java CircuitTracer -q -c invalid4.dat
+Expecting a report on problem with invalid4.dat and clean program exit.
+***begin output***
+Unable to load input file: invalid4.dat
+InvalidFileFormatException: missing start or end point
+***end output***
+java CircuitTracer -q -c invalid4.dat         	   PASS
+
+Testing java CircuitTracer -s -c invalid5.dat
+Expecting a report on problem with invalid5.dat and clean program exit.
+***begin output***
+Unable to load input file: invalid5.dat
+InvalidFileFormatException: invalid character 'N'
+***end output***
+java CircuitTracer -s -c invalid5.dat         	   PASS
+
+Testing java CircuitTracer -q -c invalid5.dat
+Expecting a report on problem with invalid5.dat and clean program exit.
+***begin output***
+Unable to load input file: invalid5.dat
+InvalidFileFormatException: invalid character 'N'
+***end output***
+java CircuitTracer -q -c invalid5.dat         	   PASS
+
+Testing java CircuitTracer -s -c invalid6.dat
+Expecting a report on problem with invalid6.dat and clean program exit.
+***begin output***
+Unable to load input file: invalid6.dat
+InvalidFileFormatException: row contains extra values
+***end output***
+java CircuitTracer -s -c invalid6.dat         	   PASS
+
+Testing java CircuitTracer -q -c invalid6.dat
+Expecting a report on problem with invalid6.dat and clean program exit.
+***begin output***
+Unable to load input file: invalid6.dat
+InvalidFileFormatException: row contains extra values
+***end output***
+java CircuitTracer -q -c invalid6.dat         	   PASS
+
+Testing java CircuitTracer -s -c invalid7.dat
+Expecting a report on problem with invalid7.dat and clean program exit.
+***begin output***
+Unable to load input file: invalid7.dat
+InvalidFileFormatException: missing values in a row
+***end output***
+java CircuitTracer -s -c invalid7.dat         	   PASS
+
+Testing java CircuitTracer -q -c invalid7.dat
+Expecting a report on problem with invalid7.dat and clean program exit.
+***begin output***
+Unable to load input file: invalid7.dat
+InvalidFileFormatException: missing values in a row
+***end output***
+java CircuitTracer -q -c invalid7.dat         	   PASS
+
+Testing java CircuitTracer -s -c invalid8.dat
+Expecting a report on problem with invalid8.dat and clean program exit.
+***begin output***
+Unable to load input file: invalid8.dat
+InvalidFileFormatException: missing values in a row
+***end output***
+java CircuitTracer -s -c invalid8.dat         	   PASS
+
+Testing java CircuitTracer -q -c invalid8.dat
+Expecting a report on problem with invalid8.dat and clean program exit.
+***begin output***
+Unable to load input file: invalid8.dat
+InvalidFileFormatException: missing values in a row
+***end output***
+java CircuitTracer -q -c invalid8.dat         	   PASS
+
+Testing java CircuitTracer -s -c invalid9.dat
+Expecting a report on problem with invalid9.dat and clean program exit.
+***begin output***
+Unable to load input file: invalid9.dat
+InvalidFileFormatException: first line does not contain valid row and column values
+***end output***
+java CircuitTracer -s -c invalid9.dat         	   PASS
+
+Testing java CircuitTracer -q -c invalid9.dat
+Expecting a report on problem with invalid9.dat and clean program exit.
+***begin output***
+Unable to load input file: invalid9.dat
+InvalidFileFormatException: first line does not contain valid row and column values
+***end output***
+java CircuitTracer -q -c invalid9.dat         	   PASS
+
+Testing java CircuitTracer -s -c invalid10.dat
+Expecting a report on problem with invalid10.dat and clean program exit.
+***begin output***
+Unable to load input file: invalid10.dat
+InvalidFileFormatException: extra rows
+***end output***
+java CircuitTracer -s -c invalid10.dat        	   PASS
+
+Testing java CircuitTracer -q -c invalid10.dat
+Expecting a report on problem with invalid10.dat and clean program exit.
+***begin output***
+Unable to load input file: invalid10.dat
+InvalidFileFormatException: extra rows
+***end output***
+java CircuitTracer -q -c invalid10.dat        	   PASS
+
+Testing java CircuitTracer -s -c invalid11.dat
+Expecting a report on problem with invalid11.dat and clean program exit.
+***begin output***
+Unable to load input file: invalid11.dat
+InvalidFileFormatException: missing values in a row
+***end output***
+java CircuitTracer -s -c invalid11.dat        	   PASS
+
+Testing java CircuitTracer -q -c invalid11.dat
+Expecting a report on problem with invalid11.dat and clean program exit.
+***begin output***
+Unable to load input file: invalid11.dat
+InvalidFileFormatException: missing values in a row
+***end output***
+java CircuitTracer -q -c invalid11.dat        	   PASS
+
+Testing java CircuitTracer -s -c invalid12.dat
+Expecting a report on problem with invalid12.dat and clean program exit.
+***begin output***
+Unable to load input file: invalid12.dat
+InvalidFileFormatException: first line does not contain valid row and column values
+***end output***
+java CircuitTracer -s -c invalid12.dat        	   PASS
+
+Testing java CircuitTracer -q -c invalid12.dat
+Expecting a report on problem with invalid12.dat and clean program exit.
+***begin output***
+Unable to load input file: invalid12.dat
+InvalidFileFormatException: first line does not contain valid row and column values
+***end output***
+java CircuitTracer -q -c invalid12.dat        	   PASS
+
+Testing java CircuitTracer -s -c noSuchFile
+Expecting a report on problem with noSuchFile and clean program exit.
+***begin output***
+Unable to load input file: noSuchFile
+java.io.FileNotFoundException: noSuchFile (The system cannot find the file specified)
+***end output***
+java CircuitTracer -s -c noSuchFile           	   PASS
+
+Testing java CircuitTracer -q -c noSuchFile
+Expecting a report on problem with noSuchFile and clean program exit.
+***begin output***
+Unable to load input file: noSuchFile
+java.io.FileNotFoundException: noSuchFile (The system cannot find the file specified)
+***end output***
+java CircuitTracer -q -c noSuchFile           	   PASS
+
+****************************************
+CircuitTracer Invalid Command Line Tests
+****************************************
+
+Testing java CircuitTracer -z -c valid1.dat 
+Expecting a usage message and clean exit with no other output.
+***begin output***
+Usage: java CircuitTracer storageChoice displayChoice inputFile 
+	where storageChoice is either -s for a stack or -q for a queue,
+	displayChoice is either -c for console-only output or -g for GUI output,
+	and inputFile is the name of a file containing a layout to complete.
+***end output***
+java CircuitTracer -z -c valid1.dat           	   PASS
+
+Testing java CircuitTracer -s -z valid1.dat 
+Expecting a usage message and clean exit with no other output.
+***begin output***
+Usage: java CircuitTracer storageChoice displayChoice inputFile 
+	where storageChoice is either -s for a stack or -q for a queue,
+	displayChoice is either -c for console-only output or -g for GUI output,
+	and inputFile is the name of a file containing a layout to complete.
+***end output***
+java CircuitTracer -s -z valid1.dat           	   PASS
+
+Testing java CircuitTracer -q -z valid1.dat 
+Expecting a usage message and clean exit with no other output.
+***begin output***
+Usage: java CircuitTracer storageChoice displayChoice inputFile 
+	where storageChoice is either -s for a stack or -q for a queue,
+	displayChoice is either -c for console-only output or -g for GUI output,
+	and inputFile is the name of a file containing a layout to complete.
+***end output***
+java CircuitTracer -q -z valid1.dat           	   PASS
+
+Testing java CircuitTracer -s valid1.dat 
+Expecting a usage message and clean exit with no other output.
+***begin output***
+Usage: java CircuitTracer storageChoice displayChoice inputFile 
+	where storageChoice is either -s for a stack or -q for a queue,
+	displayChoice is either -c for console-only output or -g for GUI output,
+	and inputFile is the name of a file containing a layout to complete.
+***end output***
+java CircuitTracer -s valid1.dat              	   PASS
+
+Testing java CircuitTracer -q valid1.dat 
+Expecting a usage message and clean exit with no other output.
+***begin output***
+Usage: java CircuitTracer storageChoice displayChoice inputFile 
+	where storageChoice is either -s for a stack or -q for a queue,
+	displayChoice is either -c for console-only output or -g for GUI output,
+	and inputFile is the name of a file containing a layout to complete.
+***end output***
+java CircuitTracer -q valid1.dat              	   PASS
+
+Testing java CircuitTracer -s -c -z valid1.dat 
+Expecting a usage message and clean exit with no other output.
+***begin output***
+Usage: java CircuitTracer storageChoice displayChoice inputFile 
+	where storageChoice is either -s for a stack or -q for a queue,
+	displayChoice is either -c for console-only output or -g for GUI output,
+	and inputFile is the name of a file containing a layout to complete.
+***end output***
+java CircuitTracer -s -c -z valid1.dat        	   PASS
+
+Testing java CircuitTracer -q -c -z valid1.dat 
+Expecting a usage message and clean exit with no other output.
+***begin output***
+Usage: java CircuitTracer storageChoice displayChoice inputFile 
+	where storageChoice is either -s for a stack or -q for a queue,
+	displayChoice is either -c for console-only output or -g for GUI output,
+	and inputFile is the name of a file containing a layout to complete.
+***end output***
+java CircuitTracer -q -c -z valid1.dat        	   PASS
+
+Testing java CircuitTracer -s -c 
+Expecting a usage message and clean exit with no other output.
+***begin output***
+Usage: java CircuitTracer storageChoice displayChoice inputFile 
+	where storageChoice is either -s for a stack or -q for a queue,
+	displayChoice is either -c for console-only output or -g for GUI output,
+	and inputFile is the name of a file containing a layout to complete.
+***end output***
+java CircuitTracer -s -c                      	   PASS
+
+Testing java CircuitTracer -q -c 
+Expecting a usage message and clean exit with no other output.
+***begin output***
+Usage: java CircuitTracer storageChoice displayChoice inputFile 
+	where storageChoice is either -s for a stack or -q for a queue,
+	displayChoice is either -c for console-only output or -g for GUI output,
+	and inputFile is the name of a file containing a layout to complete.
+***end output***
+java CircuitTracer -q -c                      	   PASS
+
+Testing java CircuitTracer 
+Expecting a usage message and clean exit with no other output.
+***begin output***
+Usage: java CircuitTracer storageChoice displayChoice inputFile 
+	where storageChoice is either -s for a stack or -q for a queue,
+	displayChoice is either -c for console-only output or -g for GUI output,
+	and inputFile is the name of a file containing a layout to complete.
+***end output***
+java CircuitTracer                            	   PASS
+
+Testing java CircuitTracer valid1.dat 
+Expecting a usage message and clean exit with no other output.
+***begin output***
+Usage: java CircuitTracer storageChoice displayChoice inputFile 
+	where storageChoice is either -s for a stack or -q for a queue,
+	displayChoice is either -c for console-only output or -g for GUI output,
+	and inputFile is the name of a file containing a layout to complete.
+***end output***
+java CircuitTracer valid1.dat                 	   PASS
+
+*******************************
+CircuitTracer GUI Option Tests
+*******************************
+
+Testing java CircuitTracer -s -g valid1.dat
+Expecting an unsupported option message and clean exit with no other console output,
+or for GUI to open and no console output.
+***begin console output***
+Sorry, -g GUI output option is not supported at this time.
+***end console output***
+java CircuitTracer -s -g valid1.dat           	   PASS
+
+Testing java CircuitTracer -q -g valid1.dat
+Expecting an unsupported option message and clean exit with no other console output,
+or for GUI to open and no console output.
+***begin console output***
+Sorry, -g GUI output option is not supported at this time.
+***end console output***
+java CircuitTracer -q -g valid1.dat           	   PASS
+
+-------------------------------------------------------------
+
+Total Tests Run: 82 of 82,  Passed: 82 (100.0%),  Failed: 0
+
+
