@@ -7,6 +7,8 @@ import java.util.*;
  *  the iterator detects any change to the list from another source. 
  *  Note: "Unsorted" only means that it is not inherently maintained
  *  in a sorted order. It may or may not be sorted.
+ *  See Java API documentation for java.util.List interface for a
+ *  more comprehensive overview of expectations for a Java list.
  *
  * @author CS 221
  *
@@ -79,7 +81,7 @@ public interface IndexedUnsortedList<T> extends Iterable<T>
     public T remove(T element);
 
     /**  
-     * Removes  and returns the element at the specified index. 
+     * Removes and returns the element at the specified index. 
      *
      * @param index the index of the element to be retrieved
      * @return the element at the given index
