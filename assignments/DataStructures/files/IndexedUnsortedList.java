@@ -36,7 +36,7 @@ public interface IndexedUnsortedList<T> extends Iterable<T>
     public void add(T element);
 
     /**  
-     * Adds the specified element after the specified target. 
+     * Adds the specified element after the first element of the list matching the specified target. 
      *
      * @param element the element to be added after the target
      * @param target  the target is the item that the element will be added after
