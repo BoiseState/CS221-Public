@@ -1,5 +1,5 @@
 import java.util.Comparator;
-
+import java.util.ListIterator;
 /**
  * Class for sorting lists that implement the IndexedUnsortedList interface,
  * using ordering defined by class of objects in list or a Comparator.
@@ -68,7 +68,68 @@ public class Sort
 	 */
 	private static <T extends Comparable<T>> void mergesort(IndexedUnsortedList<T> list)
 	{
-		// TODO: Implement recursive mergesort algorithm 
+	    if(list.size() <= 1)
+		return;
+
+	    System.out.println(list);
+	    int mid = list.size() / 2;
+	    IndexedUnsortedList<T> left = new WrappedDLL<T>();
+	    IndexedUnsortedList<T> right = new WrappedDLL<T>();
+	    ListIterator<T> iter = list.listIterator();
+
+	    for(int i = 0; i < list.size(); i++){
+		T elem = iter.next();
+		if(i < mid){
+		    left.add(elem);
+		    System.out.println("LEft:" + left);
+		} else{
+		    right.add(elem);
+		    System.out.println("Right: " + right);
+		}
+	    }
+
+  
+	    mergesort(left);
+	    mergesort(right);
+
+
+	    ListIterator<T> lIter = left.listIterator();
+	    ListIterator<T> rIter = right.listIterator();
+	    iter = list.listIterator();
+
+	    while(iter.hasNext()){
+		iter.next();
+		iter.remove();
+	    }
+	    
+	    T lElem = lIter.next();
+	    T rElem = rIter.next();
+
+	    if(lElem.compareTo(rElem) > 0){
+		list.add(lElem);
+		list.add(rElem);
+	    } else {
+		list.add(rElem);
+		list.add(lElem);
+	    }
+
+	    while(lIter.hasNext() && rIter.hasNext()){
+		if(lElem.compareTo(rElem) >= 0){
+		    list.add(lElem);
+		    lElem = lIter.next();
+		} else {
+		    list.add(rElem);
+		    rElem = rIter.next();
+		}
+	    }
+	    while(lIter.hasNext()){
+		list.add(lIter.next());
+	    }
+	    while(rIter.hasNext()){
+		list.add(rIter.next());
+	    }
+	    
+	    
 	}
 		
 	/**
@@ -86,8 +147,6 @@ public class Sort
 	 */
 	private static <T> void mergesort(IndexedUnsortedList<T> list, Comparator<T> c)
 	{
-		// TODO: Implement recursive mergesort algorithm using Comparator
-
 	}
 	
 }
