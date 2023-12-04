@@ -2,8 +2,13 @@ import java.util.*;
 
 /**
  *  Interface for an Iterable, Indexed, Unsorted List ADT.
+ *  Iterators and ListIterators provided by the list are required
+ *  to be "fail-fast" and throw ConcurrentModificationException if
+ *  the iterator detects any change to the list from another source. 
  *  Note: "Unsorted" only means that it is not inherently maintained
  *  in a sorted order. It may or may not be sorted.
+ *  See Java API documentation for java.util.List interface for a
+ *  more comprehensive overview of expectations for a Java list.
  *
  * @author CS 221
  *
@@ -33,7 +38,7 @@ public interface IndexedUnsortedList<T> extends Iterable<T>
     public void add(T element);
 
     /**  
-     * Adds the specified element after the specified target. 
+     * Adds the specified element after the first element of the list matching the specified target. 
      *
      * @param element the element to be added after the target
      * @param target  the target is the item that the element will be added after
@@ -54,7 +59,7 @@ public interface IndexedUnsortedList<T> extends Iterable<T>
      * Removes and returns the first element from this list. 
      * 
      * @return the first element from this list
-     * @throws IllegalStateException if list contains no elements
+     * @throws NoSuchElementException if list contains no elements
      */
     public T removeFirst();
 
@@ -62,12 +67,12 @@ public interface IndexedUnsortedList<T> extends Iterable<T>
      * Removes and returns the last element from this list. 
      *
      * @return the last element from this list
-     * @throws IllegalStateException if list contains no elements
+     * @throws NoSuchElementException if list contains no elements
      */
     public T removeLast();
 
     /**  
-     * Removes and returns the specified element from this list. 
+     * Removes and returns the first element from the list matching the specified element.
      *
      * @param element the element to be removed from the list
      * @return removed element
@@ -76,7 +81,7 @@ public interface IndexedUnsortedList<T> extends Iterable<T>
     public T remove(T element);
 
     /**  
-     * Removes  and returns the element at the specified index. 
+     * Removes and returns the element at the specified index. 
      *
      * @param index the index of the element to be retrieved
      * @return the element at the given index
@@ -85,10 +90,10 @@ public interface IndexedUnsortedList<T> extends Iterable<T>
     public T remove(int index); 
         
     /**  
-     * Sets the element at the specified index. 
+     * Replace the element at the specified index with the given element. 
      *
-     * @param index   the index into the array to which the element is to be set
-     * @param element the element to be set into the list
+     * @param index   the index of the element to replace
+     * @param element the replacement element to be set into the list
      * @throws IndexOutOfBoundsException if the index is out of range (index < 0 || index >= size)
      */
     public void set(int index, T element);
@@ -103,7 +108,7 @@ public interface IndexedUnsortedList<T> extends Iterable<T>
     public T get(int index);
 
     /**  
-     * Returns the index of the specified element. 
+     * Returns the index of the first element from the list matching the specified element. 
      *
      * @param element  the element for the index is to be retrieved
      * @return the integer index for this element or -1 if element is not in the list    
@@ -114,7 +119,7 @@ public interface IndexedUnsortedList<T> extends Iterable<T>
      * Returns a reference to the first element in this list. 
      *
      * @return a reference to the first element in this list
-     * @throws IllegalStateException if list contains no elements
+     * @throws NoSuchElementException if list contains no elements
      */
     public T first();
 
@@ -122,7 +127,7 @@ public interface IndexedUnsortedList<T> extends Iterable<T>
      * Returns a reference to the last element in this list. 
      *
      * @return a reference to the last element in this list
-     * @throws IllegalStateException if list contains no elements
+     * @throws NoSuchElementException if list contains no elements
      */
     public T last();
 
