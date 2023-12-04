@@ -45,7 +45,7 @@ public class CircuitBoard {
 	public CircuitBoard(String filename) throws FileNotFoundException {
 		Scanner fileScan = new Scanner(new File(filename));
 		
-		//TODO: parse the given file to populate the char[][]
+		//TODO: parse the given file to populate the char[][], start and end points, and number of rows and cols
 		// throw FileNotFoundException if Scanner cannot read the file
 		// throw InvalidFileFormatException if any formatting or parsing issues are encountered
 		
