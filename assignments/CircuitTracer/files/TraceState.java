@@ -2,13 +2,13 @@ import java.awt.Point;
 import java.util.ArrayList;
 
 /**
- * Represents a search state including a potential path through a CircuitBoard
+ * Represents a potential path through a CircuitBoard - a search state for CircuitTracer.
  * 
  * @author mvail
  */
 public class TraceState {
-	private CircuitBoard board;
-	private ArrayList<Point> path;
+	private CircuitBoard board;		//state of the current board
+	private ArrayList<Point> path;	//history of traces added
 	
 	/** Initial state with the trace path beginning at given row and column
 	 * @param startingBoard 
@@ -69,16 +69,9 @@ public class TraceState {
 	}
 	
 	/** @return true if path ends adjacent to ending component */
-	public boolean isComplete() {
-		return adjacent(path.get(path.size()-1), board.getEndingPoint());
-	}
-	
-	/**
-	 * @param p1 first Point
-	 * @param p2 second Point
-	 * @return true if p1 and p2 are adjacent, else false
-	 */
-	private boolean adjacent(Point p1, Point p2) {
+	public boolean isSolution() {
+		Point p1 = path.get(path.size()-1);
+		Point p2 = board.getEndingPoint();
 		if (p1.x-1 == p2.x && p1.y == p2.y) {
 			return true;
 		}

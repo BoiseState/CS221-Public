@@ -9,7 +9,12 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
 /**
- * A unit test class for CircuitTracer (and CircuitBoard)
+ * A unit test class for CircuitTracer and CircuitBoard.
+ * 
+ * NOTE: IDEs typically do not play nicely with this tester. Plan to
+ * manually compile project files and run the tester from the command line.
+ * For debugging, you are advised to replicate failing scenarios in a
+ * separate driver class
  * 
  * @author mvail
  */

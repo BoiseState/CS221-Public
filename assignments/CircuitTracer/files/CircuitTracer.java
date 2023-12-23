@@ -11,7 +11,8 @@ import java.util.ArrayList;
  */
 public class CircuitTracer {
 
-	/** launch the program
+	/** Launch the program. 
+	 * 
 	 * @param args three required arguments:
 	 *  first arg: -s for stack or -q for queue
 	 *  second arg: -c for console output or -g for GUI output
@@ -25,7 +26,6 @@ public class CircuitTracer {
 	private void printUsage() {
 		//TODO: print out clear usage instructions when there are problems with
 		// any command line args
-		// See https://en.wikipedia.org/wiki/Usage_message for format and content guidance
 	}
 	
 	/** 

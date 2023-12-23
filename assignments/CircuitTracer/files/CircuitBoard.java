@@ -19,12 +19,12 @@ public class CircuitBoard {
 	//constants you may find useful
 	private final int ROWS; //initialized in constructor
 	private final int COLS; //initialized in constructor
-	private final char OPEN = 'O'; //capital 'o'
-	private final char CLOSED = 'X';
-	private final char TRACE = 'T';
-	private final char START = '1';
-	private final char END = '2';
-	private final String ALLOWED_CHARS = "OXT12";
+	private final char OPEN = 'O';	//capital 'o', an open position
+	private final char CLOSED = 'X';//a blocked position
+	private final char TRACE = 'T';	//part of the trace connecting 1 to 2
+	private final char START = '1';	//the starting component
+	private final char END = '2';	//the ending component
+	private final String ALLOWED_CHARS = "OXT12"; //useful for validating with indexOf
 
 	/** Construct a CircuitBoard from a given board input file, where the first
 	 * line contains the number of rows and columns as ints and each subsequent
@@ -39,15 +39,15 @@ public class CircuitBoard {
 	 * 
 	 * @param filename
 	 * 		file containing a grid of characters
-	 * @throws FileNotFoundException if Scanner cannot read the file
-	 * @throws InvalidFileFormatException for any other format or content issue that prevents reading a valid input file
+	 * @throws FileNotFoundException if Scanner cannot open or read the file
+	 * @throws InvalidFileFormatException for any file formatting or content issue
 	 */
 	public CircuitBoard(String filename) throws FileNotFoundException {
 		Scanner fileScan = new Scanner(new File(filename));
 		
-		//TODO: parse the given file to populate the char[][], start and end points, and number of rows and cols
+		//TODO: parse the given file to populate the char[][]
 		// throw FileNotFoundException if Scanner cannot read the file
-		// throw InvalidFileFormatException if any formatting or parsing issues are encountered
+		// throw InvalidFileFormatException if any issues are encountered while parsing the file
 		
 		ROWS = 0; //replace with initialization statements using values from file
 		COLS = 0;
@@ -67,7 +67,7 @@ public class CircuitBoard {
 		COLS = original.numCols();
 	}
 
-	/** utility method for copy constructor
+	/** Utility method for copy constructor
 	 * @return copy of board array */
 	private char[][] getBoard() {
 		char[][] copy = new char[board.length][board[0].length];
