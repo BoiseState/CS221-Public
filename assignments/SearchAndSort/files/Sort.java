@@ -3,7 +3,7 @@ import java.util.Comparator;
 /**
  * Class for sorting lists that implement the IndexedUnsortedList interface,
  * using ordering defined by class of objects in list or a Comparator.
- * As written uses Mergesort algorithm.
+ * As written uses Quicksort algorithm.
  *
  * @author CS221
  */
@@ -34,7 +34,7 @@ public class Sort
 	 */
 	public static <T extends Comparable<T>> void sort(IndexedUnsortedList<T> list) 
 	{
-		mergesort(list);
+		quicksort(list);
 	}
 
 	/**
@@ -52,11 +52,11 @@ public class Sort
 	 */
 	public static <T> void sort(IndexedUnsortedList <T> list, Comparator<T> c) 
 	{
-		mergesort(list, c);
+		quicksort(list, c);
 	}
 	
 	/**
-	 * Mergesort algorithm to sort objects in a list 
+	 * Quicksort algorithm to sort objects in a list 
 	 * that implements the IndexedUnsortedList interface, 
 	 * using compareTo() method defined by class of objects in list.
 	 * DO NOT MODIFY THIS METHOD SIGNATURE
@@ -66,13 +66,13 @@ public class Sort
 	 * @param list
 	 *            The list to be sorted, implements IndexedUnsortedList interface 
 	 */
-	private static <T extends Comparable<T>> void mergesort(IndexedUnsortedList<T> list)
+	private static <T extends Comparable<T>> void quicksort(IndexedUnsortedList<T> list)
 	{
-		// TODO: Implement recursive mergesort algorithm 
+		// TODO: Implement recursive quicksort algorithm 
 	}
 		
 	/**
-	 * Mergesort algorithm to sort objects in a list 
+	 * Quicksort algorithm to sort objects in a list 
 	 * that implements the IndexedUnsortedList interface,
 	 * using the given Comparator.
 	 * DO NOT MODIFY THIS METHOD SIGNATURE
@@ -84,9 +84,9 @@ public class Sort
 	 * @param c
 	 *            The Comparator used
 	 */
-	private static <T> void mergesort(IndexedUnsortedList<T> list, Comparator<T> c)
+	private static <T> void quicksort(IndexedUnsortedList<T> list, Comparator<T> c)
 	{
-		// TODO: Implement recursive mergesort algorithm using Comparator
+		// TODO: Implement recursive quicksort algorithm using Comparator
 
 	}
 	
