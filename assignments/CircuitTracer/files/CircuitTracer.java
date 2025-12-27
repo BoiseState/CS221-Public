@@ -30,7 +30,7 @@ public class CircuitTracer {
 	
 	/** 
 	 * Set up the CircuitBoard and all other components based on command
-	 * line arguments.
+	 * line arguments. Search for shortest paths and report results.
 	 * 
 	 * @param args command line arguments passed through from main()
 	 */
