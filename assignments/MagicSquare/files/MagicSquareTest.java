@@ -4,7 +4,7 @@ import java.io.FileNotFoundException;
  * Console app to test MagicSquare class
  * @author mvail
  */
-public class MagicSquaresTest {
+public class MagicSquareTest {
 	private int passes = 0;
 	private int failures = 0;
 	private int total = 0;
@@ -62,9 +62,11 @@ public class MagicSquaresTest {
 			{7, 8, 9, 10, 11, 12},
 			{19, 20, 21, 22, 23, 24}};
 
+	private enum Mode {CHECK, CREATE};
+
 	/** @param args not used */
 	public static void main(String[] args) {
-		MagicSquaresTest tester = new MagicSquaresTest();
+		MagicSquareTest tester = new MagicSquareTest();
 		tester.runTests();
 	}
 	
@@ -81,49 +83,49 @@ public class MagicSquaresTest {
 		printTest("constructorTest_valid3x3", constructorTest(valid3x3));
 		printTest("getMatrixTest_valid3x3", getMatrixTest(valid3x3, valid3x3grid));
 		printTest("isMagicSquareTest_valid3x3", isMagicSquareTest(valid3x3, true));
-		printTest("toStringTest", toStringTest(valid3x3, 3));
+		printTest("toStringTest", toStringTest(valid3x3, 3, Mode.CHECK, true));
 
 		//tests using valid4x4 file
 		printTest("constructorTest_valid4x4", constructorTest(valid4x4));
 		printTest("getMatrixTest_valid4x4", getMatrixTest(valid4x4, valid4x4grid));
 		printTest("isMagicSquareTest_valid4x4", isMagicSquareTest(valid4x4, true));
-		printTest("toStringTest", toStringTest(valid4x4, 4));
+		printTest("toStringTest", toStringTest(valid4x4, 4, Mode.CHECK, true));
 		
 		//tests using valid5x5 file
 		printTest("constructorTest_valid5x5", constructorTest(valid5x5));
 		printTest("getMatrixTest_valid5x5", getMatrixTest(valid5x5, valid5x5grid));
 		printTest("isMagicSquareTest_valid5x5", isMagicSquareTest(valid5x5, true));
-		printTest("toStringTest", toStringTest(valid5x5, 5));
+		printTest("toStringTest", toStringTest(valid5x5, 5, Mode.CHECK, true));
 		
 		//tests using valid6x6 file
 		printTest("constructorTest_valid6x6", constructorTest(valid6x6));
 		printTest("getMatrixTest_valid6x6", getMatrixTest(valid6x6, valid6x6grid));
 		printTest("isMagicSquareTest_valid6x6", isMagicSquareTest(valid6x6, true));
-		printTest("toStringTest", toStringTest(valid6x6, 6));
+		printTest("toStringTest", toStringTest(valid6x6, 6, Mode.CHECK, true));
 		
 		//tests using invalid3x3a file
 		printTest("constructorTest_invalid3x3a", constructorTest(invalid3x3a));
 		printTest("getMatrixTest_invalid3x3a", getMatrixTest(invalid3x3a, invalid3x3agrid));
 		printTest("isMagicSquareTest_invalid3x3a", isMagicSquareTest(invalid3x3a, false));
-		printTest("toStringTest", toStringTest(invalid3x3a, 3));
+		printTest("toStringTest", toStringTest(invalid3x3a, 3, Mode.CHECK, false));
 
 		//tests using invalid3x3b file
 		printTest("constructorTest_invalid3x3b", constructorTest(invalid3x3b));
 		printTest("getMatrixTest_invalid3x3b", getMatrixTest(invalid3x3b, invalid3x3bgrid));
 		printTest("isMagicSquareTest_invalid3x3b", isMagicSquareTest(invalid3x3b, false));
-		printTest("toStringTest", toStringTest(invalid3x3b, 3));
+		printTest("toStringTest", toStringTest(invalid3x3b, 3, Mode.CHECK, false));
 
 		//tests using invalid4x4 file
 		printTest("constructorTest_invalid4x4", constructorTest(invalid4x4));
 		printTest("getMatrixTest_invalid4x4", getMatrixTest(invalid4x4, invalid4x4grid));
 		printTest("isMagicSquareTest_invalid4x4", isMagicSquareTest(invalid4x4, false));
-		printTest("toStringTest", toStringTest(invalid4x4, 3));
+		printTest("toStringTest", toStringTest(invalid4x4, 3, Mode.CHECK, false));
 		
 		//tests using invalid6x6 file
 		printTest("constructorTest_invalid6x6", constructorTest(invalid6x6));
 		printTest("getMatrixTest_invalid6x6", getMatrixTest(invalid6x6, invalid6x6grid));
 		printTest("isMagicSquareTest_invalid6x6", isMagicSquareTest(invalid6x6, false));
-		printTest("toStringTest", toStringTest(invalid6x6, 6));
+		printTest("toStringTest", toStringTest(invalid6x6, 6, Mode.CHECK, false));
 		
 		//test encapsulation from getMatrix() method
 		printTest("getMatrixEncapsulationTest", getMatrixEncapsulationTest(valid3x3, valid3x3grid));
@@ -137,7 +139,7 @@ public class MagicSquaresTest {
 		printTest("constructorTest_new3x3", constructorTest(newFile, 3));
 		printTest("getMatrixTest_new3x3", getMatrixTest(newFile, 3, valid3x3grid));
 		printTest("isMagicSquareTest_new3x3", isMagicSquareTest(newFile, 3, true));
-		printTest("toStringTest", toStringTest(newFile, 3, 3));
+		printTest("toStringTest", toStringTest(newFile, 3, Mode.CREATE, true));
 		printTest("validOutputFormatTest", validOutputFormatTest(newFile, 3, valid3x3grid));
 		
 		//printTest("constructorTest_new4x4", constructorTest(newFile, 4)); //ArrayIndexOutOfBoundsException
@@ -145,7 +147,7 @@ public class MagicSquaresTest {
 		printTest("constructorTest_new5x5", constructorTest(newFile, 5));
 		printTest("getMatrixTest_new5x5", getMatrixTest(newFile, 5, valid5x5grid));
 		printTest("isMagicSquareTest_new5x5", isMagicSquareTest(newFile, 5, true));
-		printTest("toStringTest", toStringTest(newFile, 5, 5));
+		printTest("toStringTest", toStringTest(newFile, 5, Mode.CREATE, true));
 		printTest("validOutputFormatTest", validOutputFormatTest(newFile, 5, valid5x5grid));
 		
 		/////////////////
@@ -257,49 +259,49 @@ public class MagicSquaresTest {
 		return success;
 	}
 
-	/** Exercise toString() after loading testFile
-	 *    testing toString() is a little challenging because unit tests should
-	 *    be automated such that no user evaluation is necessary to determine
-	 *    if a test has succeeded or failed - need to compare toString() output
-	 *    to expected output */
-	private boolean toStringTest(String testFile, int rows) {
-		boolean success = true;		
+	/** Exercise toString() after loading or creating testFile.
+	 *  Compare toString() output to expected output */
+	private boolean toStringTest(String testFile, int size, Mode mode, boolean expectedValid) {
+		boolean success = true;	
 		try {
-			MagicSquareInterface ms = new MagicSquare(testFile);
+			MagicSquareInterface ms;
+			if (mode == Mode.CHECK) {
+				ms = new MagicSquare(testFile);
+			} else {
+				ms = new MagicSquare(testFile, size);
+			}
 			String str = ms.toString();
 			System.out.printf("toString() output:\n%s\n", str);
-			if(str.length() < rows*rows || str.startsWith("MagicSquare@")) {
+			if(str.length() < size*size || str.startsWith("MagicSquare@")) {
 				success = false;
 			}
 			String[] outRows = str.split("\n");
-			if (outRows.length < rows+2) {
+			if (outRows.length < size+2 || outRows.length > size+3) {
 				success = false;
 			}
-		} catch (Exception e) {
-			System.out.println("toStringTest: no Exception expected");
-			e.printStackTrace(System.out);
-			success = false;
-		}
-		return success;
-	}
-
-	/** Exercise toString() after loading testFile
-	 *    testing toString() is a little challenging because unit tests should
-	 *    be automated such that no user evaluation is necessary to determine
-	 *    if a test has succeeded or failed - need to compare toString() output
-	 *    to expected output */
-	private boolean toStringTest(String testFile, int size, int rows) {
-		boolean success = true;
-		try {
-			MagicSquareInterface ms = new MagicSquare(testFile, size);
-			String str = ms.toString();
-			System.out.printf("toString() output:\n%s\n", str);
-			if(str.length() < rows*rows || str.startsWith("MagicSquare@")) {
+			if (!outRows[0].strip().equals("The matrix")) {
 				success = false;
 			}
-			String[] outRows = str.split("\n");
-			if (outRows.length < rows+2) {
-				success = false;
+			if (outRows[outRows.length-1].isBlank()) {
+				if (expectedValid) {
+					if (!outRows[outRows.length-2].strip().equals("is a magic square.")) {
+						success = false;
+					}
+				} else {
+					if (!outRows[outRows.length-2].strip().equals("is not a magic square.")) {
+						success = false;
+					}
+				}
+			} else {
+				if (expectedValid) {
+					if (!outRows[outRows.length-1].strip().equals("is a magic square.")) {
+						success = false;
+					}
+				} else {
+					if (!outRows[outRows.length-1].strip().equals("is not a magic square.")) {
+						success = false;
+					}
+				}
 			}
 		} catch (Exception e) {
 			System.out.println("toStringTest: no Exception expected");
