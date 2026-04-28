@@ -14,11 +14,11 @@ public class SortTester {
 	private final boolean PRINT_SECTION_SUMMARIES;
 
 	// named elements for use in tests
-	private static final Integer ELEMENT_A = new Integer(1);
-	private static final Integer ELEMENT_B = new Integer(2);
-	private static final Integer ELEMENT_C = new Integer(3);
-	private static final Integer ELEMENT_D = new Integer(4);
-	private static final Integer ELEMENT_E = new Integer(5);
+	private static final Integer ELEMENT_A = 1;
+	private static final Integer ELEMENT_B = 2;
+	private static final Integer ELEMENT_C = 3;
+	private static final Integer ELEMENT_D = 4;
+	private static final Integer ELEMENT_E = 5;
 	
 	private static final int BIG_SORT_SIZE = 20000;
 
