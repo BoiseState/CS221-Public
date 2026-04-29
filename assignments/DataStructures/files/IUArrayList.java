@@ -85,22 +85,8 @@ public class IUArrayList<T> implements IndexedUnsortedList<T> {
 
 	@Override
 	public T remove(T element) {
-		int index = indexOf(element);
-		if (index == NOT_FOUND) {
-			throw new NoSuchElementException();
-		}
-		
-		T retVal = array[index];
-		
-		rear--;
-		//shift elements
-		for (int i = index; i < rear; i++) {
-			array[i] = array[i+1];
-		}
-		array[rear] = null;
-		modCount++;
-		
-		return retVal;
+		// TODO
+		return null;
 	}
 
 	@Override
@@ -123,20 +109,8 @@ public class IUArrayList<T> implements IndexedUnsortedList<T> {
 
 	@Override
 	public int indexOf(T element) {
-		int index = NOT_FOUND;
-		
-		if (!isEmpty()) {
-			int i = 0;
-			while (index == NOT_FOUND && i < rear) {
-				if (element.equals(array[i])) {
-					index = i;
-				} else {
-					i++;
-				}
-			}
-		}
-		
-		return index;
+		// TODO
+		return NOT_FOUND;
 	}
 
 	@Override
@@ -153,7 +127,8 @@ public class IUArrayList<T> implements IndexedUnsortedList<T> {
 
 	@Override
 	public boolean contains(T target) {
-		return (indexOf(target) != NOT_FOUND);
+		// TODO
+		return false;
 	}
 
 	@Override
@@ -165,7 +140,7 @@ public class IUArrayList<T> implements IndexedUnsortedList<T> {
 	@Override
 	public int size() {
 		// TODO 
-		return 0;
+		return -1;
 	}
 
 	@Override
@@ -187,10 +162,13 @@ public class IUArrayList<T> implements IndexedUnsortedList<T> {
 	private class ALIterator implements Iterator<T> {
 		private int nextIndex;
 		private int iterModCount;
-		
+		private boolean canRemove;
+	
+		/** Initialize a new Iterator for IUArrayList */
 		public ALIterator() {
 			nextIndex = 0;
 			iterModCount = modCount;
+			canRemove = false;
 		}
 
 		@Override

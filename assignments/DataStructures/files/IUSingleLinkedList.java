@@ -67,42 +67,8 @@ public class IUSingleLinkedList<T> implements IndexedUnsortedList<T> {
 
 	@Override
 	public T remove(T element) {
-		if (isEmpty()) {
-			throw new NoSuchElementException();
-		}
-		
-		boolean found = false;
-		Node<T> previous = null;
-		Node<T> current = head;
-		
-		while (current != null && !found) {
-			if (element.equals(current.getElement())) {
-				found = true;
-			} else {
-				previous = current;
-				current = current.getNext();
-			}
-		}
-		
-		if (!found) {
-			throw new NoSuchElementException();
-		}
-		
-		if (size() == 1) { //only node
-			head = tail = null;
-		} else if (current == head) { //first node
-			head = current.getNext();
-		} else if (current == tail) { //last node
-			tail = previous;
-			tail.setNext(null);
-		} else { //somewhere in the middle
-			previous.setNext(current.getNext());
-		}
-		
-		size--;
-		modCount++;
-		
-		return current.getElement();
+		// TODO
+		return null;
 	}
 
 	@Override
@@ -178,11 +144,13 @@ public class IUSingleLinkedList<T> implements IndexedUnsortedList<T> {
 	private class SLLIterator implements Iterator<T> {
 		private Node<T> nextNode;
 		private int iterModCount;
+		private boolean canRemove;
 		
-		/** Creates a new iterator for the list */
+		/** Initilize a new Iterator for IUSingleLinkedList */
 		public SLLIterator() {
 			nextNode = head;
 			iterModCount = modCount;
+			canRemove = false;
 		}
 
 		@Override
